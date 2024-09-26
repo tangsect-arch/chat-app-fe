@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-import { Container, Row, Col, Card, Form } from "react-bootstrap";
+import { Container, Card, Form } from "react-bootstrap";
 import { InputField } from "../../components/common/InputField.jsx";
 import { CommonButton } from "../../components/common/Button.jsx";
 import apiService from "../../components/api/apiService.js";

@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Form } from "react-bootstrap";
+import { ChatList } from "./ChatList.jsx";
+import { Profile } from "./Profile.jsx";
 
 export const ConversationList = () => {
   return (
     <Container>
-      <div>Profile</div>
+      <Profile />
       <div>
         <Form className="search-input">
           <Form.Group controlId="search">
@@ -16,7 +18,7 @@ export const ConversationList = () => {
           </Form.Group>
         </Form>
       </div>
-      <div>Chat list</div>
+      <ChatList />
     </Container>
   );
 };

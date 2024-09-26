@@ -1,0 +1,11 @@
+.profile-container {
+    padding: 10px;
+}
+
+.profile-picture {
+    height: 3rem
+}
+
+.profile-details h5 {
+    margin: 0;
+}
