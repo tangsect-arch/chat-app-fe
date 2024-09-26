@@ -8,7 +8,11 @@ export const ConversationList = () => {
       <div>
         <Form className="search-input">
           <Form.Group controlId="search">
-            <Form.Control type="text" placeholder="Search conversation..." />
+            <Form.Control
+              type="text"
+              placeholder="Search conversation..."
+              style={{ padding: "0.25rem", borderRadius: "0.75rem" }}
+            />
           </Form.Group>
         </Form>
       </div>

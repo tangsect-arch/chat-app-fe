@@ -39,41 +39,37 @@ export const LoginForm = () => {
 
   return (
     <Container className="login-container">
-      <Row className="justify-content-center">
-        <Col className="content-box">
-          <Card className="auth-form">
-            <Card.Body>
-              <h2>Login</h2>
-              {isError === true ? <p>Invalid username/password</p> : ""}
-              <Form onSubmit={handleFormSubmit}>
-                <InputField
-                  label="Username"
-                  value={username}
-                  onChange={setUsername}
-                  type="string"
-                  required={true}
-                />
-                <InputField
-                  label="Password"
-                  value={password}
-                  onChange={setPasswordValue}
-                  type="password"
-                  required={true}
-                />
-                <CommonButton
-                  className="form-button"
-                  label="Login"
-                  type="submit"
-                  variant="primary"
-                />
-              </Form>
-              <p>
-                Don't have an account?<Link to="/register">Register</Link>
-              </p>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      <Card className="auth-form">
+        <Card.Body>
+          <h2>Login</h2>
+          {isError === true ? <p>Invalid username/password</p> : ""}
+          <Form onSubmit={handleFormSubmit}>
+            <InputField
+              label="Username"
+              value={username}
+              onChange={setUsername}
+              type="string"
+              required={true}
+            />
+            <InputField
+              label="Password"
+              value={password}
+              onChange={setPasswordValue}
+              type="password"
+              required={true}
+            />
+            <CommonButton
+              className="form-button"
+              label="Login"
+              type="submit"
+              variant="primary"
+            />
+          </Form>
+          <p>
+            Don't have an account?<Link to="/register">Register</Link>
+          </p>
+        </Card.Body>
+      </Card>
     </Container>
   );
 };
