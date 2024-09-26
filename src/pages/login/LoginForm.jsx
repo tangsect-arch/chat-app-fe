@@ -6,7 +6,7 @@ import { InputField } from "../../components/common/InputField.jsx";
 import { CommonButton } from "../../components/common/Button.jsx";
 import apiService from "../../components/api/apiService.js";
 
-import "./LoginForm.css";
+import "../AuthForm.css";
 
 export const LoginForm = () => {
   const [isError, setIsError] = useState([0]);
@@ -58,6 +58,9 @@ export const LoginForm = () => {
               type="password"
               required={true}
             />
+            <p>
+              <Link to="/forget-password">Forget Password</Link>
+            </p>
             <CommonButton
               className="form-button"
               label="Login"
@@ -66,7 +69,7 @@ export const LoginForm = () => {
             />
           </Form>
           <p>
-            Don't have an account?<Link to="/register">Register</Link>
+            Don't have an account? <Link to="/register">Register</Link>
           </p>
         </Card.Body>
       </Card>

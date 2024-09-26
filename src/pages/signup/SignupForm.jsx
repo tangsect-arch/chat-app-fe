@@ -6,7 +6,7 @@ import { InputField } from "../../components/common/InputField.jsx";
 import { CommonButton } from "../../components/common/Button.jsx";
 import apiService from "../../components/api/apiService.js";
 
-import "./SignupForm.css";
+import "../AuthForm.css";
 
 export const SignupForm = () => {
   const [username, setUsernameValue] = useState("");
