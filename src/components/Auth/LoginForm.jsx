@@ -3,9 +3,9 @@ import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { InputField } from "../common/InputField";
 import { CommonButton } from "../common/Button";
 
-import "./AuthForm.css";
+import "./LoginForm.css";
 
-export const AuthForm = () => {
+export const LoginForm = () => {
   const [emailAddress, setEmailAddress] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
 
@@ -33,16 +33,21 @@ export const AuthForm = () => {
                   value={emailAddress}
                   onChange={setEmailAddress}
                   type="email"
-                  required
+                  required="true"
                 />
                 <InputField
                   label="Password"
                   value={passwordValue}
                   onChange={setPasswordValue}
                   type="password"
-                  required
+                  required="true"
                 />
-                <CommonButton label="Login" type="submit" variant="primary" />
+                <CommonButton
+                  className="form-button"
+                  label="Login"
+                  type="submit"
+                  variant="primary"
+                />
               </Form>
             </Card.Body>
           </Card>
