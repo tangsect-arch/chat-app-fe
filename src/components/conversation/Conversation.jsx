@@ -1,5 +1,5 @@
 import React from "react";
 
-export const conversation = () => {
-  return <div>conversation</div>;
+export const Conversation = () => {
+  return <div>Conversation</div>;
 };

@@ -9,7 +9,6 @@ import apiService from "../../components/api/apiService.js";
 import "./LoginForm.css";
 
 export const LoginForm = () => {
-  const [data, setData] = useState([]);
   const [isError, setIsError] = useState([0]);
   const [username, setUsername] = useState("");
   const [password, setPasswordValue] = useState("");
