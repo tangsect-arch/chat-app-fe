@@ -3,9 +3,9 @@ import axios from "axios";
 const API_URL = "https://api.example.com"; // Replace with your API URL
 
 const apiService = {
-  getData: async () => {
+  getData: async (url) => {
     try {
-      const response = await axios.get(`${API_URL}/data`);
+      const response = await axios.get(url);
       return response.data;
     } catch (error) {
       throw error;
