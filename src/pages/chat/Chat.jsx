@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { ConversationList } from "../../components/conversationList/ConversationList";
+
 import { Conversation } from "../../components/conversation/Conversation";
+import {ConversationList} from "../../components/conversationList/ConversationList.jsx"
 import "./Chat.css";
 
 export const Chat = () => {
