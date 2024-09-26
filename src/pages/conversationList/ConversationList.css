@@ -1,0 +1,15 @@
+.full-height {
+    height: 100vh; /* Set height to full viewport height */
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  .scrollable {
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%; /* Take full height of the parent */
+  }
+  
+  .divider {
+    width: 1px; /* Thickness of the line */
+    background-color: #ccc; /* Line color */
+  }
+  

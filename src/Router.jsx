@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LoginForm } from "./components/Auth/LoginForm";
-import { SignupForm } from "./components/Auth/SignupForm";
-import { Chat } from "./pages/Chat";
-import { Home } from "./pages/Home";
+import { LoginForm } from "./pages/login/LoginForm.jsx";
+import { SignupForm } from "./pages/signup/SignupForm.jsx";
+import { Chat } from "./pages/chat/Chat.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 
@@ -11,11 +10,11 @@ function Router() {
   return (
     <Container>
       <Routes>
-        <Route path="/" element={<Chat />} />
+        <Route path="/" element={<LoginForm />} />
         <Route path="/register" element={<SignupForm />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="*" element={<Chat />} />
+        <Route path="/chat" element={<Chat />} />
+        {/* <Route path="/account" element={<Account />} /> */}
       </Routes>
     </Container>
   );
