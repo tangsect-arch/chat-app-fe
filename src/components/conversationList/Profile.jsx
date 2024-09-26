@@ -4,9 +4,6 @@ import { Image } from "react-bootstrap";
 import "./ConversationList.css";
 
 export const Profile = ({ username, profilePic } = props) => {
-  {
-    console.log(username);
-  }
   return (
     <div className="profile-container d-flex align-items-center">
       <Image
