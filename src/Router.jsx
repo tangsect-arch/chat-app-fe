@@ -8,15 +8,13 @@ import { Container } from "react-bootstrap";
 
 function Router() {
   return (
-    <Container>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="/register" element={<SignupForm />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/chat" element={<Chat />} />
-        {/* <Route path="/account" element={<Account />} /> */}
-      </Routes>
-    </Container>
+    <Routes>
+      <Route path="/" element={<LoginForm />} />
+      <Route path="/register" element={<SignupForm />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/chat" element={<Chat />} />
+      {/* <Route path="/account" element={<Account />} /> */}
+    </Routes>
   );
 }
 
