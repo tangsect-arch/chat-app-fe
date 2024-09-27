@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { ChatList } from "./ChatList.jsx";
 import { Profile } from "./Profile.jsx";
+import { SearchForm } from "../common/SearchForm.jsx";
 
 import apiService from "../api/apiService.js";
 
@@ -32,19 +33,17 @@ export const ConversationList = () => {
   }
   return (
     <Container>
-      <Profile username={user.username} profilePic={user.profilePic} />
-      <div>
-        <Form className="search-input">
-          <Form.Group controlId="search">
-            <Form.Control
-              type="text"
-              placeholder="Search conversation..."
-              style={{ padding: "0.25rem", borderRadius: "0.75rem" }}
+      <Profile name={user.name} profilePic={user.profilePic} />
+      <SearchForm />
+      {conversationList
+        ? conversationList.map((conversation, index) => (
+            <ChatList
+              userInfo={conversation.otherUser}
+              index={index}
+              key={index}
             />
-          </Form.Group>
-        </Form>
-      </div>
-      <ChatList />
+          ))
+        : "No Conversation"}
     </Container>
   );
 };
