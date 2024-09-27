@@ -28,9 +28,18 @@ export const ConversationList = () => {
     fetchUser();
   }, []);
 
-  {
-    user;
-  }
+  const handleClick = async (conversationId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:5000/conversation/${conversationId}/messages`
+      );
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <Container>
       <Profile name={user.name} profilePic={user.profilePic} />
@@ -39,8 +48,10 @@ export const ConversationList = () => {
         ? conversationList.map((conversation, index) => (
             <ChatList
               userInfo={conversation.otherUser}
+              conversationId={conversation.conversationId}
               index={index}
               key={index}
+              handleClick={handleClick}
             />
           ))
         : "No Conversation"}

@@ -1,7 +1,12 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 
-export const ChatList = ({ userInfo, index } = props) => {
+export const ChatList = ({
+  userInfo,
+  index,
+  conversationId,
+  handleClick,
+} = props) => {
   return (
     <div className="profile-container d-flex align-items-center">
       <Image
@@ -13,9 +18,7 @@ export const ChatList = ({ userInfo, index } = props) => {
       />
       <div
         className="profile-details ms-3"
-        onClick={() => {
-          alert("clicked");
-        }}
+        onClick={() => handleClick(conversationId)}
       >
         <h5>{userInfo ? userInfo?.name : "Anonymous"}</h5>
       </div>
