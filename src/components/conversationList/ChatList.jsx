@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Image } from "react-bootstrap";
 
-export const ChatList = ({
-  userInfo,
-  index,
-  conversationId,
-  handleClick,
-} = props) => {
+import { Context } from "../../context/Context.jsx";
+
+export const ChatList = ({ userInfo, index, conversationId } = props) => {
+  const { setSelectedConversation } = useContext(Context);
+
+  const handleClick = async (conversationId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:5000/conversation/${conversationId}/messages`
+      );
+      const data = await response.json();
+      setSelectedConversation(data.messages);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   return (
     <div className="profile-container d-flex align-items-center">
       <Image
