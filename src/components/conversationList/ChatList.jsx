@@ -4,7 +4,7 @@ import { Image } from "react-bootstrap";
 import { Context } from "../../context/Context.jsx";
 
 export const ChatList = ({ userInfo, index, conversationId } = props) => {
-  const { setSelectedConversation } = useContext(Context);
+  const { setSelectedConversation, setSelectedProfile } = useContext(Context);
 
   const handleClick = async (conversationId) => {
     try {
@@ -13,6 +13,7 @@ export const ChatList = ({ userInfo, index, conversationId } = props) => {
       );
       const data = await response.json();
       setSelectedConversation(data.messages);
+      setSelectedProfile(userInfo);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
